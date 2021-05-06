@@ -1,0 +1,3 @@
+secret_key       = "This"
+heroku_acc_email = "@gmal.com"
+heroku_api_key   = "36e7e8e1421d3"
