@@ -7,13 +7,17 @@ variable "port" {
 variable "app_name" {
   description = "Application name"
   type        = string
-  default     = "samuel-crowdbotics-django-test"
+  default     = "samuel-crowdbotics-t2"
 }
 
 variable "instance_size" {
   description = "How large our instance should be"
   type = string
   default = "standard-1x"
+}
+
+variable "app_version" {
+  description = "Github app version to deploy"
 }
 
 variable "secret_key" {
