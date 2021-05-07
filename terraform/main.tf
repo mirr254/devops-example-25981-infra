@@ -1,9 +1,10 @@
 
 terraform {
+  backend "pg" {
+  }
+}
 
-#   backend "pg" {
-#   }
-
+terraform {
   required_providers {
     heroku = {
       source  = "heroku/heroku"
