@@ -39,3 +39,11 @@ resource "heroku_formation" "django-formation" {
   size       = var.instance_size
   depends_on = [heroku_build.django_app]
 }
+
+# Establish certificate for our app
+resource "heroku_cert" "ssl_certificate" {
+  app               = heroku_app.crodbotics_django.name
+  certificate_chain = file("server.crt")
+  private_key       = file("server.key")
+  depends_on        = ["heroku_addon.ssl"]
+}
