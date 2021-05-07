@@ -7,7 +7,7 @@ variable "port" {
 variable "app_name" {
   description = "Application name"
   type        = string
-  default     = "samuel-crowdbotics-django"
+  default     = "samuel-crowdbotics-django-test"
 }
 
 variable "instance_size" {

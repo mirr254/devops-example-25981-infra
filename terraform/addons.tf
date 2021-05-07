@@ -13,3 +13,7 @@ resource "heroku_addon" "papertrail" {
   plan = "papertrail:choklad"
 }
 
+resource "heroku_addon" "ssl" {
+  app  = heroku_app.crodbotics_django.name
+  plan = "ssl"
+}
