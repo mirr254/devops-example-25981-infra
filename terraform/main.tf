@@ -1,4 +1,8 @@
+
 terraform {
+#   backend "pg" {
+#   }
+
   required_providers {
     heroku = {
       source  = "heroku/heroku"
@@ -17,17 +21,17 @@ resource "heroku_app" "crodbotics_django" {
   }
 }
 
-#TODO: FInish this
+
 resource "heroku_build" "django_app" {
   app = heroku_app.crodbotics_django.name
  
   source {
-    path = "."
+    path = "../"
   }
   
 }
 
-# Launch the app's web process by scaling-up
+# Scale up to launch app
 resource "heroku_formation" "django-formation" {
   app        = heroku_app.crodbotics_django.name
   type       = "web"
