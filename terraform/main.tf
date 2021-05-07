@@ -1,8 +1,8 @@
 
-# terraform {
-#   backend "pg" {
-#   }
-# }
+terraform {
+  backend "pg" {
+  }
+}
 
 terraform {
   required_providers {
