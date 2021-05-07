@@ -26,7 +26,7 @@ resource "heroku_build" "django_app" {
   app = heroku_app.crodbotics_django.name
  
   source {
-    path = "../"
+    path = "../../"
   }
   
 }
