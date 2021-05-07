@@ -18,6 +18,8 @@ variable "instance_size" {
 
 variable "app_version" {
   description = "Github app version to deploy"
+  type = string
+  default = "v1.0.1"
 }
 
 variable "secret_key" {
