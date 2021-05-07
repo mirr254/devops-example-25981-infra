@@ -1,8 +1,8 @@
 
-terraform {
-  backend "pg" {
-  }
-}
+# terraform {
+#   backend "pg" {
+#   }
+# }
 
 terraform {
   required_providers {
@@ -26,9 +26,11 @@ resource "heroku_app" "crodbotics_django" {
 
 resource "heroku_build" "django_app" {
   app = heroku_app.crodbotics_django.name
+  buildpacks = [ "https://github.com/heroku/heroku-buildpack-python.git" ]
 
   source {
-    path = "../../"
+    url = "https://github.com/mirr254/devops-example-25981/archive/refs/tags/${var.app_version}.tar.gz"
+    version = var.app_version
   }
   
 }
