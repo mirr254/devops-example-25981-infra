@@ -7,7 +7,7 @@ variable "port" {
 variable "app_name" {
   description = "Application name"
   type        = string
-  default     = "samuel-crowdbotics-t2"
+  default     = "samuel-crowdbotics-main"
 }
 
 variable "instance_size" {
